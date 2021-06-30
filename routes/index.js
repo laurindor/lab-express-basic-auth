@@ -1,8 +1,10 @@
-const router = require("express").Router();
+const express = require("express");
+const indexRouter = express.Router();
 
-/* GET home page */
-router.get("/", (req, res, next) => {
-  res.render("index");
+// GET  /
+indexRouter.get("/", (req, res) => {
+  res.render("index", { title: "Express basic auth" });
 });
 
-module.exports = router;
+module.exports = indexRouter;
+
